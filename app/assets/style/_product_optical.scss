@@ -1,0 +1,157 @@
+.product-menu{
+  width: 1386px;
+  margin: 0 auto;
+
+  @include pad{
+    max-width: 100%;
+  }
+
+  li{
+    width: 33.33%;
+    position: relative;
+    border: 1px solid #DCDCDC;
+  }
+
+  a{
+    color: #000;
+
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-bottom: 16px solid $primary-color;
+
+      @include pad(){
+        border-bottom-width: 8px;
+      }
+
+      @include mobile(){
+        border-bottom-width: 4px;
+      }
+    }
+
+    &:hover{
+      &::after{
+        width: 100%;
+      }
+    }
+  }
+
+  .active{
+    &::after{
+      width: 100%;
+    }
+  }
+
+  img{
+    @include pad(){
+      width: 32px;
+      height: 32px;
+    }
+
+    @include mobile(){
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.product-banner{
+  img{
+    width: 49.22%;
+
+    @include pad(){
+      width: 50%;
+    }
+  }
+}
+
+@each $item in $optical {
+  $i: index($optical, $item);
+  .product-banner li:nth-child(#{$i}) {
+    background: url(https://hexschool.github.io/webLayoutTraining1st/week3/#{$item}.png) no-repeat center;
+    background-size: cover;
+    width: 49.22%;
+    height: 309px;
+
+    @include pad(){
+      width: 50%;
+    }
+
+    @include mobile(){
+      height: 144px;
+    }
+  }
+}
+
+.product-content{
+  padding-top: 88px;
+  padding-bottom: 156px;
+
+  @include pad(){
+    padding-top: 40px;
+    padding-bottom: 104px;
+  }
+
+  @include mobile(){
+    padding-top: 30px;
+    padding-bottom: 56px;
+  }
+
+  h2{
+    @include mobile(){
+      margin-bottom: 20px;
+    }
+  }
+
+  .pagination{
+    @include mobile(){
+      padding-top: 8px;
+    }
+  }
+}
+
+.product-item{
+  width: 23%;
+  margin-bottom: 104px;
+
+  @include pad(){
+    width: 47.83%;
+    margin-bottom: 72px;
+  }
+
+  @include mobile(){
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  img{
+    width: 100%;
+    height: 164px;
+
+    @include mobile(){
+      height: 166px;
+    }
+  }
+}
+
+@each $color in $optical-color {
+  $i: index($optical-color, $color);
+  .color-list li:nth-child(#{$i}) {
+    width: 24px;
+    height: 24px;
+    background: $color;
+    border-radius: 4px;
+
+    @include mobile(){
+      width: 16px;
+      height: 16px;
+
+      @if $i == 1{
+        margin-right: 4px;
+      }
+    }
+  }
+}

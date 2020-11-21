@@ -1,0 +1,36 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', 'Noto Sans', sans-serif;
+}
+
+img{
+	display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  display: block;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, p, a, label, input{
+	line-height: 1.5;
+}
+
+.container{
+	max-width: 1110px;
+	margin: 0 auto;
+
+	@include pad(){
+		max-width: 690px;
+	}
+
+	@include mobile(){
+		max-width: 100%;
+		padding: 0 15px;
+	}
+}

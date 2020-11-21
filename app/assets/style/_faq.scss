@@ -1,0 +1,59 @@
+.banner-inner{
+	background: url(https://hexschool.github.io/webLayoutTraining1st/week3/qa.png) no-repeat center;
+	background-size: cover;
+  height: 304px;
+  
+  @include mobile(){
+    height: 143px;
+  }
+}
+
+.icon-help {
+  width: 60px;
+
+  @include pad(){
+    width: 48px;
+  }
+
+  @include mobile(){
+    width: 24px;
+  }
+}
+
+.faq-content{
+	padding-top: 80px;
+  padding-bottom: 264px;
+
+  @include pad(){
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+
+  @include mobile(){
+    padding-top: 24px;
+    padding-bottom: 36px;
+  }
+  
+  h2{
+    margin-bottom: 36px;
+
+    @include mobile(){
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.faq-item{
+  p{
+    padding-left: 95px;
+
+    @include pad(){
+      padding-left: 60px;
+    }
+
+    @include mobile(){
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.blog-menu{
+  a{
+    padding: 12px 24px 14px;
+    color: $light-color;
+
+    &:hover{
+      color: $yellow-color;
+    }
+    
+    @include pad(){
+      padding: 16px;
+    }
+  }
+
+  li:first-child{
+    a{
+      padding-left: 0;
+    }
+  }
+}
+
+.blog-content{
+	padding-top: 82px;
+  padding-bottom: 156px;
+  
+  @include pad(){
+    padding-top: 40px;
+    padding-bottom: 104px;
+  }
+
+  @include mobile(){
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+}
+
+.article-list{
+  li{
+    margin-bottom: 60px;
+
+    @include pad(){
+      margin-bottom: 32px;
+    }
+
+    @include mobile(){
+      display: block;
+      margin-bottom: 26px;
+    }
+  }
+
+  img{
+    margin-right: 30px;
+
+    @include pad(){
+      width: 48.387%;
+    }
+
+    @include mobile(){
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.article-content{
+  @include pad(){
+    width: 47.214%;
+  }
+
+  @include mobile(){
+    width: 100%;
+  }
+}
+
+.more{
+  &:hover{
+    color: #a23c39;
+  }
+
+  @include pad(){
+    &-md{
+      &:hover{
+        color: #333;
+      }
+    }
+  }
+}
+
+.pagination{
+  @include mobile(){
+    padding-top: 13px;
+  }
+
+  a{
+    font-size: 18px;
+    padding: 10px 16px 14px;
+    color: $dark-color;
+    border: 1px solid $dark-color;
+
+    @include mobile(){
+      font-size: 11px;
+      padding: 8px 10px 9px 11px;
+    }
+  }
+
+  .active, a:hover{
+    background: #000;
+    color: $light-color;
+  }
+
+  .next-page{
+    background: #F2F2F2;
+  }
+}
